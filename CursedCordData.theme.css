@@ -508,7 +508,7 @@ ul[role="group"] > .containerDefault_c69b6d{
   background-color: var(--cursedcord-primary-color)!important;
   -webkit-mask-image: url("https://i.postimg.cc/ZRFgCjL2/server-name-bg.png")!important;
   -webkit-mask-size: 1000px 130px!important;
-  -webkit-mask-position-x: calc(var(--custom-guild-sidebar-width) + 77px)!important;
+  -webkit-mask-position-x: calc(var(--custom-guild-sidebar-width) + 70px)!important;
 
   pointer-events: none!important;
 }
