@@ -1,5 +1,5 @@
 # CursedCord
-Cursedcord aims to swap the default soft and bubbly expereience for a more sharp, almost retro feel. The ability to visually remove many of nitros features brings less noise and clutter to discord's UI. ALong with being able to customize nearly every color you can see, this theme aloows you to make the discord you want.
+Cursedcord aims to swap the default soft and bubbly expereience for a more sharp, almost retro feel. The ability to visually remove many of nitros features brings less noise and clutter to discord's UI. ALong with being able to customize nearly every color you can see, this theme allows you to make the experience you desire.
 
 ## Features
   - Custom assets for server bars, user status indicators, and more! (nothing fancy, just enough to keep them in line with the sharp theme)
@@ -20,7 +20,7 @@ footnote: I realized after uploading all of these that I made them all black and
 To my knowlege this should work with most plugins as the border changes and colorings are applied at a root level. Of course this probably is not the case for every plugin out there. If my theme does break a plugin please let me know and I'll try my best to fix it.
 
 ## Known issues
-### I was not aware the built in css editor for betterdiscord only allowed the user to change colors and not variables. I'm hoping to release a workaround soon, but for now going to your theme folder and opening this theme in a text editor of your choice will allow you to change said variables
+### I was not aware the built in css editor for betterdiscord only allowed the user to change colors and not variables. I'm hoping to release a workaround soon, but for now going to your theme folder and opening this theme in a text editor/IDE of your choice will allow you to change said variables
 I personally have been using this theme for the past 3 months with minor bugs here and there. If you find any bugs not listed here, please let me know on discord @cursedelectric, or by opening an issue on github
   - the typing indicator on dms (the three dots) is not fully hidden when a user is typing. I have not come up with a clever way to incorporate it into this theme yet
   - when using a custom font, bold and italsized fonts will show as normal text
@@ -31,3 +31,4 @@ I personally have been using this theme for the past 3 months with minor bugs he
   - in rare cases, when hovering past a server channel, it will change between the hover color and the default color until it is selected.
   - when there is a notif blip for unread pinned messages, it will appear as an ugly square instead of something more pleasing. this isnt a bug per say, i just think it doesn't look good
   - again, in rare cases, when clicking off of a server channel and onto another, small bits of the selected coloring will be on the previously clicked on channel
+  - nitro users colored names are in some cases not being ovveridden
