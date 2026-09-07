@@ -1,8 +1,5 @@
 :root,
 .theme-dark, .theme-light { 
-  
-   /*role colors - uncomment to show, keep commmented out to hide*/
-  /* --cursedcord-server-role-colors:unset!important; CURRENTLY BROKEN*/
   /*ALL TOGGLES - leave var blank to show, and "none" to hide*/
 
   /*server tags*/
@@ -237,6 +234,7 @@
 */
 
 
+
 /*removing borders from pfp at the top where name is in dms*/
 ._44b0c28be7879b7b-mask foreignObject,
 ._44b0c28be7879b7b-svg foreignObject {
@@ -351,7 +349,6 @@
 }
 /*----------------------------------------*/
 .sidebarList__5e434 {
-  border-top:none!important;
   border-left:none!important;
 }
 /* controls friends tab + freinds list + active now*/
@@ -491,11 +488,16 @@ ul[role="group"] > .containerDefault_c69b6d{
   top:48px!important;
 }
 
+
 /* remove border from server name bg on servers specifically with banners */
 .bannerVisible_f37cb1,
 .header_f37cb1 {
   border-top:none!important;
 }
+.header_f37cb1 {
+  border-bottom: none!important;
+}
+
 /*server name bg */
 .header_f37cb1::before {
   content: ""!important;
@@ -506,14 +508,18 @@ ul[role="group"] > .containerDefault_c69b6d{
   background-color: var(--cursedcord-primary-color)!important;
   -webkit-mask-image: url("https://i.postimg.cc/ZRFgCjL2/server-name-bg.png")!important;
   -webkit-mask-size: 1000px 130px!important;
-  -webkit-mask-position-x: calc(var(--custom-guild-sidebar-width) + 70px)!important;
+  -webkit-mask-position-x: calc(var(--custom-guild-sidebar-width) + 77px)!important;
 
   pointer-events: none!important;
 }
 
-
-.header_f37cb1 {
-  border-bottom: none!important;
+/*shortening server name and dropdown menu space to not overlap with invite friends*/
+.guildDropdown_f37cb1 {
+  width:calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 50px);
+}
+/*removing padding on server name and icon to the left of it*/
+.guildDropdown_f37cb1 {
+  padding-inline:0px!important;
 }
 
 /*removing padding from server name + icons */
@@ -569,6 +575,9 @@ ul[role="group"] > .containerDefault_c69b6d{
 }
 
 
+.numberBadge__463b7{
+  color:var(--cursedcord-notiftext)!important;
+}
 /*---------------------------------server boost bar---------------------------------------------*/
 /*getting rid of right margin on text channel scroller */
 .d125d22cdfd32cfe-fade,
@@ -720,7 +729,7 @@ foreignObject[x="0"][width="20"][height="20"][mask]{
 
 /*border for message box */
 .f75fb00fb7356cbe-channelBottomBarArea {
-  outline: solid var(--cursedcord-border) thin !important;
+  border: 1px solid var(--cursedcord-border) !important;
 }
 
 /*squares up message box */
@@ -763,6 +772,12 @@ foreignObject[x="0"][width="20"][height="20"][mask]{
 foreignObject[width="48"][height="48"][x="0"][mask]{
   mask:none!important;
 }
+
+/*remove circle mask from "show user profile" users profile banner*/
+.fill_f7e69e, .banner__68edb, .banner__7f9c0{
+  mask:none!important;
+}
+
 /* targets server icon makes. makes servers square*/
 foreignObject[width="40"][height="40"],
 foreignObject[width="32"][height="32"]{
@@ -782,6 +797,15 @@ foreignObject[width="32"][height="32"]{
 
 /*removes help from top bar */
 
+/*------------------------------------- Server and friends list on left --------------------------------------*/
+
+/*controls the leftmost wrapper containing server bar*/
+.wrapper_ef3116{
+  background-color: var(--background-brand);
+  border-right:1px solid var(--cursedcord-border)!important;
+}
+
+
 
 /* --------------------------------------------------------------*/
 
@@ -797,6 +821,16 @@ foreignObject[width="32"][height="32"]{
 
 
 /*--------------------------------------------------nitro features---------------------------------------*/
+
+/*controls nitro menu to the left when user profile is expanded */
+[id="user-profile-editing-panel"] {
+  width: 0px !important; 
+}
+
+/*controls nitro menu to the left when user profile is expanded */
+.editingPanelExpanded__9c3be  {
+  grid-template-columns: 0!important;
+}
 
 /*removing guild tags */
 .chipletContainerInner__10651,.chipletContainerInline__10651, .clanTag__972a0{
@@ -835,6 +869,10 @@ foreignObject[width="32"][height="32"]{
 /* gets rid of nameplate backgrounds */
 ._4bbc6dc06e75ad52-container{
   display: var(--cursedcord-decorations)!important;
+}
+
+.showEffect_dfb989, .container_dfb989, .prism_dfb989 {
+  webkit-text-fill-color: var(--cursedcord-secondary-text-color) !important;
 }
 
 /*profile popout background*/
@@ -896,7 +934,11 @@ a[data-list-item-id$="___shop"] {
 .buttonContainer__74017 {
   display:block!important;
 }
-/* ----------------------------------------------------------------------------------*/
+/* -------------------------------Show user profile widget---------------------------------------*/
+
+.aside_f58343{
+  padding: 0px !important;
+}
 
 /* view full profile button bottom right of user popout menu */
 .footer__7f9c0 {
@@ -915,7 +957,7 @@ a[data-list-item-id$="___shop"] {
 .e6b7699ce8339e1c-searchBar,
 ._9293f6b2fc12398a-container,
 ._7641b507c6cdbb10-container{
-  outline: solid var(--cursedcord-border) thin !important;
+  border-right: 1px solid var(--cursedcord-border) !important;
   border-start-start-radius: 0px!important;
   border-radius: 0px!important;
 }
@@ -929,9 +971,7 @@ a[data-list-item-id$="___shop"] {
 
 ._37e49614b9f110a9-container,
 ._37e49614b9f110a9-containerRtcOpened{
-  border:none!important;
-  outline: solid var(--cursedcord-border) thin !important;
-  border-radius: 0px!important;
+  border: 1px solid var(--cursedcord-border) !important;
 }
 
 .e6b7699ce8339e1c-searchBar{
@@ -980,6 +1020,10 @@ a[data-list-item-id$="___shop"] {
   border-right: 1px solid var(--cursedcord-border) !important;
 }
 
+.page__5e434 {
+  border-top: 1px solid var(--cursedcord-border) !important;
+}
+
 /*unsure */
 ._5e434347c823b592-content{
   border: 0px!important;
@@ -999,8 +1043,8 @@ a[data-list-item-id$="___shop"] {
 /*controls bottom left panels */
 .panels__5e434 {
   border-radius: 0px!important;
-  width:calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + var(--custom-guild-list-width) + 2px)!important;
-  left:-1%!important;
+  width:calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) + var(--custom-guild-list-width))!important;
+  left:-0%!important;
 
   bottom:0px!important;
   border:none!important;
@@ -1042,8 +1086,12 @@ mask circle[r="46"] {
 ._44b0c28be7879b7b-avatar,
 ._44b0c28be7879b7b-avatarBorder{
   border-radius:0px!important;
+  
 }
 
+.avatar__75742 {
+  border: 1px solid var(--cursedcord-border)!important;
+}
 .container_ab8609{
       top: calc(var(--custom-user-profile-banner-height) + 5px)!important;
 }
